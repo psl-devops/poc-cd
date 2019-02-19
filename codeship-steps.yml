@@ -6,4 +6,4 @@
   command: mvn package -DskipTests -Pci
 - name: Deploy
   service: heroku
-  command: codeship_heroku deploy /deploy ${HEROKU_APP}
+  command: codeship_heroku_deploy deploy /deploy psl-devops-workshop
