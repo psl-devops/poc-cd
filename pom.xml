@@ -44,7 +44,7 @@
             <version>2.12.4</version>
             <configuration>
               <!-- see: https://stackoverflow.com/questions/53010200/maven-surefire-could-not-find-forkedbooter-class -->
-              <argLine>-Xmx1024m -Xms1024m -XX:MaxPermSize=512m -Dsurefire.useSystemClassLoader=false</argLine>
+              <argLine>-Xmx1024m -Xms1024m -Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
               <includes>
                 <include>**/*Test.java</include>
               </includes>
