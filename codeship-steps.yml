@@ -1,0 +1,9 @@
+- name: Test
+  service: app
+  command: mvn test -B
+- name: Build
+  service: app
+  command: gradle build
+- name: Deploy
+  service: app
+  command: heroku --version

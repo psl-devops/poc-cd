@@ -1,0 +1,4 @@
+app:
+  build:
+    image: psl-devops/poc-cd
+    dockerfile: Dockerfile
