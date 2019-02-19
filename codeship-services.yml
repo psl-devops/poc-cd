@@ -2,3 +2,4 @@ app:
   build:
     image: psl-devops/poc-cd
     dockerfile: Dockerfile
+  encrypted_env_file: env.encrypted

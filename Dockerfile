@@ -16,6 +16,14 @@ RUN mvn install clean --fail-never -B -DfailIfNoTests=false
 
 # Install Heroku CLI
 RUN curl https://cli-assets.heroku.com/install.sh | sh
+# Install the java plugin for jar deployments
+heroku plugins:install java
+# Login to heroku
+(
+  echo "$HEROKU_CREDENTIALS_EMAIL"
+  echo "$HEROKU_CREDENTIALS_PASSWORD"
+) | heroku login
+heroku create --no-remote
 
 # Copy the whole repository into the image
 COPY . ./
