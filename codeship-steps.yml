@@ -5,5 +5,5 @@
   service: app
   command: mvn package -DskipTests -Pci
 - name: Deploy
-  service: app
-  command: heroku deploy:jar target/poc-cd-*.jar --app ${HEROKU_APP}
+  service: heroku
+  command: codeship_heroku deploy /deploy ${HEROKU_APP}
