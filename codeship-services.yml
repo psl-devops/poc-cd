@@ -3,8 +3,10 @@ app:
     image: psl-devops/poc-cd
     dockerfile: Dockerfile
   encrypted_env_file: env.encrypted
+  volumes:
+    - /app/target:/deploy
 heroku:
   image: codeship/heroku-deployment
   encrypted_env_file: env.encrypted
-  volumes:
-    - ./:/deploy
+  volumes_from:
+    - app
