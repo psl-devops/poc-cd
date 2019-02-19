@@ -1,6 +1,6 @@
 - name: Test
   service: app
-  command: mvn test -B
+  command: mvn test -Dsurefire.useSystemClassLoader=false
 - name: Build
   service: app
   command: gradle build

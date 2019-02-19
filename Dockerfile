@@ -1,6 +1,6 @@
 # We're using the official Maven 3 image from the Docker Hub (https://hub.docker.com/_/maven/).
 # Take a look at the available versions so you can specify the Java version you want to use.
-FROM maven:3
+FROM maven:3.6-jdk-8
 
 # INSTALL any further tools you need here so they are cached in the docker build
 
