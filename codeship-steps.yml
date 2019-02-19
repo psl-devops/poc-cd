@@ -1,9 +1,9 @@
 - name: Test
   service: app
-  command: mvn test -Dsurefire.useSystemClassLoader=false
+  command: mvn test -Pci
 - name: Build
   service: app
-  command: gradle build
+  command: mvn package -DskipTests -Pci
 - name: Deploy
   service: app
   command: heroku --version
