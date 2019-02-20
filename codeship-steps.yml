@@ -8,4 +8,4 @@
 
 - name: Deploy
   service: app
-  command: mvn -s settings.xml heroku:deploy
+  command: mvn -s settings.xml heroku:deploy -DskipTests -Pci
