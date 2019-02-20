@@ -1,5 +1,5 @@
 app:
   build:
     image: psl-devops/poc-cd
-    dockerfile: Dockerfile
-  encrypted_env_file: env.encrypted
+    dockerfile: codeship/Dockerfile
+  encrypted_env_file: codeship/env.encrypted
