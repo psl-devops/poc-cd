@@ -1,0 +1,11 @@
+- name: Test
+  service: app
+  command: mvn test -Pci
+
+- name: Build
+  service: app
+  command: mvn package -DskipTests -Pci
+
+- name: Deploy
+  service: app
+  command: mvn -s settings.xml heroku:deploy -DskipTests -Pci
