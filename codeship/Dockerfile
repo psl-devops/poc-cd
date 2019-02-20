@@ -2,7 +2,7 @@
 # Take a look at the available versions so you can specify the Java version you want to use.
 FROM maven:3.6-jdk-8
 
-COPY ./settings.xml ${HOME}/.m2/
+COPY ./codeship/settings.xml ${HOME}/.m2/
 
 # INSTALL any further tools you need here so they are cached in the docker build
 WORKDIR /app
