@@ -8,7 +8,7 @@ COPY ./codeship/settings.xml ${HOME}/.m2/
 WORKDIR /app
 
 # Copy the pom.xml into the image to install all dependencies
-COPY ../pom.xml ./
+COPY pom.xml ./
 
 # Run install task so all necessary dependencies are downloaded and cached in
 # the Docker image. We're running through the whole process but disable
@@ -16,5 +16,5 @@ COPY ../pom.xml ./
 RUN mvn install clean --fail-never -B -DfailIfNoTests=false
 
 # Copy the whole repository into the image
-COPY .. ./
+COPY . ./
 RUN rm -rf ./codeship
