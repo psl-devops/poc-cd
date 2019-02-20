@@ -1,9 +1,11 @@
 - name: Test
   service: app
   command: mvn test -Pci
+
 - name: Build
   service: app
   command: mvn package -DskipTests -Pci
+
 - name: Deploy
   service: heroku
-  command: codeship_heroku_deploy /deploy psl-devops-workshop
+  command: mvn heroku:deploy
