@@ -1,14 +1,10 @@
 - name: Test
   service: app
   command: mvn cobertura:cobertura -Dcobertura.report.format=xml -Pci
-  volumes:
-    - /app/target
 
 - name: Coverage
   service: app
-  command: java -jar codacy-coverage-reporter.jar report -l Java -r target/site/cobertura/coverage.xml
-  volumes_from:
-    - Test
+  command: java -jar codacy-coverage-reporter.jar report -l Java -r /target/site/cobertura/coverage.xml
 
 - name: Build
   service: app

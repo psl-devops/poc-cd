@@ -3,3 +3,5 @@ app:
     image: psl-devops/poc-cd
     dockerfile: codeship/Dockerfile
   encrypted_env_file: codeship/env.encrypted
+  volumes:
+    - /app/target:/target
