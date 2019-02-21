@@ -10,9 +10,6 @@
   volumes_from:
     - Test
 
-- name: Report
-  -
-
 - name: Build
   service: app
   command: mvn package -DskipTests -Pci
