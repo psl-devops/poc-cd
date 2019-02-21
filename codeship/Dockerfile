@@ -15,5 +15,6 @@ RUN mvn -s settings.xml install clean --fail-never -B -DfailIfNoTests=false
 COPY . ./
 # Download codacy reporter
 RUN wget https://github.com/codacy/codacy-coverage-reporter/releases/download/4.0.5/codacy-coverage-reporter-4.0.5-assembly.jar &&\
-    mv codacy-coverage-reporter*.jar odacy-coverage-reporter.jar
-RUN rm -rf ./codeship
+    mv codacy-coverage-reporter*.jar codacy-coverage-reporter.jar &&\
+    rm -rf ./codeship &&\
+    ls ./
