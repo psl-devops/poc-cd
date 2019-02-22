@@ -4,7 +4,7 @@
   <groupId>co.com.psl</groupId>
   <artifactId>poc-cd</artifactId>
   <packaging>jar</packaging>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.1.0-SNAPSHOT</version>
   <name>poc-cd</name>
 
   <parent>
