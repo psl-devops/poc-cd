@@ -6,3 +6,8 @@ app:
   cached: true
   volumes:
     - ./:/data
+
+data:
+  image: busybox
+  volumes_from:
+  - app

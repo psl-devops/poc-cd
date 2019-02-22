@@ -2,6 +2,10 @@
   service: app
   command: mvn -B cobertura:cobertura -Dcobertura.report.format=xml -Pci
 
+- name: List
+  service: app
+  command: ls /data/target
+
 - name: Coverage
   service: app
   command: java -jar codacy-coverage-reporter.jar report -l Java -r /data/target/site/cobertura/coverage.xml
