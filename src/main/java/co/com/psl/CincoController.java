@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
 public class CincoController {
-    @RequestMapping("/cinco")
+    @RequestMapping("/5")
     public String index() {
-        return "Integrantes Grupo 5:\n -Douglas Ardila \n -Esteban Perez \n -Andres Felipe Avendaño";
+        return "Integrantes Grupo 5: -Douglas Ardila  -Esteban Perez  -Andres Felipe Avendaño";
     }
 }
