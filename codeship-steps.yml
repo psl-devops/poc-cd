@@ -3,7 +3,7 @@
   command: mvn -B cobertura:cobertura -Dcobertura.report.format=xml -Pci
 
 - name: List
-  service: data
+  service: app
   command: ls target/site
 
 - name: Coverage
