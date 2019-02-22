@@ -4,7 +4,7 @@
 
 - name: Coverage
   service: app
-  command: java -jar codacy-coverage-reporter.jar report -l Java -r target/site/coverage.xml
+  command: java -jar codacy-coverage-reporter.jar report -l Java -r target/site/cobertura/coverage.xml
 
 - name: Build
   service: app
