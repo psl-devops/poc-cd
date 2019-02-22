@@ -4,10 +4,3 @@ app:
     dockerfile: codeship/Dockerfile
   encrypted_env_file: codeship/env.encrypted
   cached: true
-  volumes:
-    - ./:/data
-
-data:
-  image: busybox
-  volumes_from:
-  - app

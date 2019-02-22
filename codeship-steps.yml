@@ -4,11 +4,11 @@
 
 - name: List
   service: data
-  command: ls /data/target
+  command: ls target/site
 
 - name: Coverage
   service: app
-  command: java -jar codacy-coverage-reporter.jar report -l Java -r /data/target/site/cobertura/coverage.xml
+  command: java -jar codacy-coverage-reporter.jar report -l Java -r target/site/cobertura/coverage.xml
 
 - name: Build
   service: app
