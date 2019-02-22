@@ -71,7 +71,7 @@
             <configuration>
               <appName>${env.HEROKU_APP_NAME}</appName>
               <processTypes>
-                <web>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</web>
+                <web>java -jar target/poc-cd-*.jar</web>
               </processTypes>
             </configuration>
           </plugin>
