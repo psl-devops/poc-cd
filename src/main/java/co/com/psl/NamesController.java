@@ -7,7 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class NamesController {
     @RequestMapping("/team4")
     public String index() {
-        return "Felipe Macias Herrera<br>Juan Jose Suarez<br>Juan Manuel Ciro<br>";
+        String ans = "<marquee>Felipe Macias Herrera</marquee><br>";
+        ans += "<marquee direction=\"up\">Juan Jose Suarez</marquee><br>";
+        ans += "<marquee>Juan Manuel Ciro</marquee><br>";
+        return ans;
     }
 }
 
