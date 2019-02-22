@@ -1,16 +1,16 @@
 - name: Test
   service: app
-  command: mvn cobertura:cobertura -Dcobertura.report.format=xml -Pci
+  command: mvn -B cobertura:cobertura -Dcobertura.report.format=xml -Pci
 
 - name: Coverage
   service: app
-  command: java -jar codacy-coverage-reporter.jar report -l Java -r /target/site/cobertura/coverage.xml
+  command: java -jar codacy-coverage-reporter.jar report -l Java -r /data/target/site/cobertura/coverage.xml
 
 - name: Build
   service: app
-  command: mvn package -DskipTests -Pci
+  command: mvn -B package -DskipTests -Pci
 
 - name: Deploy
   tag: master
   service: app
-  command: mvn -s settings.xml heroku:deploy -DskipTests -Pci
+  command: mvn -B -s settings.xml heroku:deploy -DskipTests -Pci
