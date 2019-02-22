@@ -4,7 +4,7 @@
 
 - name: List
   service: app
-  command: ls ./target/site
+  command: ls ./target
 
 - name: Coverage
   service: app
